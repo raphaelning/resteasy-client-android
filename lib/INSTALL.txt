@@ -1,0 +1,7 @@
+resteasy-client-android depends on httpclientandroidlib. Before building resteasy-client-android, you must first install the provided httpclientandroidlib JAR to your local Maven repository:
+
+mvn install:install-file -Dfile=httpclient-android-1.1.2.jar -DgroupId=ch.boye.hcal -DartifactId=httpclient-android -Dversion=1.1.2 -Dpackaging=jar
+
+The httpclientandroidlib JAR file can also be downloaded from:
+
+http://code.google.com/p/httpclientandroidlib/

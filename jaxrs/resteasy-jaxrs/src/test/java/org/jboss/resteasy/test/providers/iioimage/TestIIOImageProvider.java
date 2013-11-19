@@ -9,6 +9,7 @@ import org.jboss.resteasy.test.BaseResourceTest;
 import org.jboss.resteasy.test.LocateTestData;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import javax.servlet.http.HttpServletResponse;
@@ -24,6 +25,9 @@ import java.util.Arrays;
 import static org.jboss.resteasy.test.TestPortProvider.generateURL;
 
 /**
+ *
+ * Modified for Android by Raphael Ning.
+ *
  * @author <a href="mailto:ryan@damnhandy.com">Ryan J. McDonough</a> Jun 23,
  *         2008
  */
@@ -58,6 +62,7 @@ public class TestIIOImageProvider extends BaseResourceTest
     * @throws Exception
     */
    @Test
+   @Ignore
    public void testPostJPEGIMage() throws Exception
    {
       ClientRequest request = new ClientRequest(TEST_URI);
@@ -96,6 +101,7 @@ public class TestIIOImageProvider extends BaseResourceTest
     * @throws Exception
     */
    @Test
+   @Ignore
    public void testPostUnsupportedImage() throws Exception
    {
       ClientRequest request = new ClientRequest(TEST_URI);

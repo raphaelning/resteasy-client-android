@@ -12,6 +12,9 @@ import java.util.Enumeration;
 import java.util.LinkedHashSet;
 
 /**
+ *
+ * Modified for Android by Raphael Ning.
+ *
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>
  * @version $Revision: 1 $
  */
@@ -40,7 +43,7 @@ public class RegisterBuiltin
 
    public static void registerProviders(ResteasyProviderFactory factory) throws Exception
    {
-      Enumeration<URL> en = Thread.currentThread().getContextClassLoader().getResources("META-INF/services/" + Providers.class.getName());
+      Enumeration<URL> en = Thread.currentThread().getContextClassLoader().getResources("META_INF/services/" + Providers.class.getName());
       LinkedHashSet<String> set = new LinkedHashSet<String>();
       while (en.hasMoreElements())
       {

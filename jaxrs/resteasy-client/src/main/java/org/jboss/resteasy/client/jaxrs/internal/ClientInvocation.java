@@ -49,6 +49,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 /**
+ *
+ * Modified for Android by Raphael Ning.
+ *
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>
  * @version $Revision: 1 $
  */
@@ -151,7 +154,7 @@ public class ClientInvocation implements Invocation
          response.bufferEntity();
          if (status >= 300 && status < 400) throw new RedirectionException(response);
 
-         return handleErrorStatus(response);
+         return (T) handleErrorStatus(response);
       }
       finally
       {
@@ -165,10 +168,9 @@ public class ClientInvocation implements Invocation
     * Throw an exception.  Expecting a status of 400 or greater.
     *
     * @param response
-    * @param <T>
     * @return
     */
-   public static <T> T handleErrorStatus(Response response)
+   public static Object handleErrorStatus(Response response)
    {
       final int status = response.getStatus();
       switch (status)

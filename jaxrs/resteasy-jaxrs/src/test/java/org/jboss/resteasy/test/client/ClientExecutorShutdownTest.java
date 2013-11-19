@@ -1,9 +1,9 @@
 package org.jboss.resteasy.test.client;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
+import ch.boye.httpclientandroidlib.HttpResponse;
+import ch.boye.httpclientandroidlib.client.HttpClient;
+import ch.boye.httpclientandroidlib.client.methods.HttpPost;
+import ch.boye.httpclientandroidlib.impl.client.DefaultHttpClient;
 import org.apache.log4j.Logger;
 import org.jboss.resteasy.client.ClientExecutor;
 import org.jboss.resteasy.client.ClientRequest;
@@ -22,6 +22,8 @@ import static org.junit.Assert.fail;
 
 /**
  * Unit tests for https://issues.jboss.org/browse/RESTEASY-621.
+ *
+ * Modified for Android by Raphael Ning.
  * 
  * @author <a href="mailto:ron.sigal@jboss.com">Ron Sigal</a>
  * @version $Revision: 1 $
@@ -100,7 +102,7 @@ public class ClientExecutorShutdownTest extends BaseResourceTest
    /**
     * Verify that if ApacheHttpClient4Executor creates its own HttpClient,
     * then ApacheHttpClient4Executor.finalize() will close the HttpClient's
-    * org.apache.http.conn.ClientConnectionManager.
+    * ch.boye.httpclientandroidlib.conn.ClientConnectionManager.
     */
    @Test
    public void testApacheHttpClient4ExecutorNonSharedHttpClientFinalize() throws Throwable
@@ -126,7 +128,7 @@ public class ClientExecutorShutdownTest extends BaseResourceTest
    /**
     * Verify that if ApacheHttpClient4Executor creates its own HttpClient,
     * then ApacheHttpClient4Executor.close() will close the HttpClient's
-    * org.apache.http.conn.ClientConnectionManager.
+    * ch.boye.httpclientandroidlib.conn.ClientConnectionManager.
     */
    @Test
    public void testApacheHttpClient4ExecutorNonSharedHttpClientClose() throws Throwable
@@ -152,7 +154,7 @@ public class ClientExecutorShutdownTest extends BaseResourceTest
    /**
     * Verify that if ApacheHttpClient4Executor receives an HttpClient through
     * a constructor, then ApacheHttpClient4Executor.finalize() will not close the
-    * HttpClient's org.apache.http.conn.ClientConnectionManager.
+    * HttpClient's ch.boye.httpclientandroidlib.conn.ClientConnectionManager.
     */
    @Test
    public void testApacheHttpClient4ExecutorSharedHttpClientFinalize() throws Throwable
@@ -173,7 +175,7 @@ public class ClientExecutorShutdownTest extends BaseResourceTest
    /**
     * Verify that if ApacheHttpClient4Executor receives an HttpClient through
     * a constructor, then ApacheHttpClient4Executor.close() will not close the
-    * HttpClient's org.apache.http.conn.ClientConnectionManager.
+    * HttpClient's ch.boye.httpclientandroidlib.conn.ClientConnectionManager.
     */
    @Test
    public void testApacheHttpClient4ExecutorSharedHttpClientClose() throws Throwable

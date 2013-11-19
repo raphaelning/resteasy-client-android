@@ -1,7 +1,7 @@
 package org.jboss.resteasy.test.client.core;
 
-import org.apache.http.client.HttpClient;
-import org.apache.http.impl.client.DefaultHttpClient;
+import ch.boye.httpclientandroidlib.client.HttpClient;
+import ch.boye.httpclientandroidlib.impl.client.DefaultHttpClient;
 import org.jboss.resteasy.client.ClientExecutor;
 import org.jboss.resteasy.client.ClientResponse;
 import org.jboss.resteasy.client.ProxyFactory;
@@ -26,6 +26,11 @@ import java.net.URI;
 
 import static org.jboss.resteasy.test.TestPortProvider.generateBaseUrl;
 
+/**
+ *
+ * Modified for Android by Raphael Ning.
+ *
+ */
 public class ClientErrorInterceptorTest extends BaseResourceTest
 {
 

@@ -4,11 +4,14 @@
     <parent>
         <artifactId>resteasy-jaxrs-all</artifactId>
         <groupId>org.jboss.resteasy</groupId>
-        <version>3.0.5.Final</version>
+        <version>3.0.5.Final-Android</version>
     </parent>
 
     <artifactId>resteasy-client</artifactId>
     <name>RESTEasy JAX-RS Client</name>
+    <description>
+        RESTEasy JAX-RS Client modified for Android by Raphael Ning
+    </description>
 
     <dependencies>
         <dependency>

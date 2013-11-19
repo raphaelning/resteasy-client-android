@@ -1,7 +1,7 @@
 package org.jboss.resteasy.util;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.util.EntityUtils;
+import ch.boye.httpclientandroidlib.HttpResponse;
+import ch.boye.httpclientandroidlib.util.EntityUtils;
 import org.jboss.resteasy.logging.Logger;
 
 import java.io.IOException;
@@ -11,6 +11,8 @@ import java.net.URISyntaxException;
 /**
  * HttpClient4xUtils provides utility methods useful for changes
  * necessitated by switching from HttpClient 3.x to HttpClient 4.x.
+ *
+ * Modified for Android by Raphael Ning.
  * 
  * @author <a href="mailto:ron.sigal@jboss.com">Ron Sigal</a>
  * @version $Revision: 1 $

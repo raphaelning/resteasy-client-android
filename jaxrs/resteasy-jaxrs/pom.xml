@@ -4,23 +4,25 @@
     <parent>
         <groupId>org.jboss.resteasy</groupId>
         <artifactId>resteasy-jaxrs-all</artifactId>
-        <version>3.0.5.Final</version>
+        <version>3.0.5.Final-Android</version>
     </parent>
     <artifactId>resteasy-jaxrs</artifactId>
     <name>RESTEasy JAX-RS Implementation</name>
-    <description/>
+    <description>
+        RESTEasy JAX-RS Implementation modified for Android by Raphael Ning
+    </description>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>jaxrs-api</artifactId>
-            <version>${project.version}</version>
+            <version>3.0.5.Final</version>
         </dependency>
 
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>tjws</artifactId>
-            <version>${project.version}</version>
+            <version>3.0.5.Final</version>
             <scope>provided</scope>
         </dependency>
 
@@ -72,14 +74,21 @@
 
         <!-- 4.0 refactor of apache httpclient -->
         <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
+            <groupId>ch.boye.hcal</groupId>
+            <artifactId>httpclient-android</artifactId>
+            <version>1.1.2</version>
         </dependency>
         
         <dependency>
             <groupId>commons-io</groupId>
 	        <artifactId>commons-io</artifactId>
             <version>${dep.commons-io.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>commons-codec</groupId>
+	        <artifactId>commons-codec</artifactId>
+            <version>1.8</version>
         </dependency>
 
         <dependency>

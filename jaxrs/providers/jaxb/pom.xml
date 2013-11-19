@@ -4,13 +4,15 @@
     <parent>
         <groupId>org.jboss.resteasy</groupId>
         <artifactId>resteasy-jaxrs-all</artifactId>
-        <version>3.0.5.Final</version>
+        <version>3.0.5.Final-Android</version>
 	    <relativePath>../../pom.xml</relativePath>
     </parent>
     <artifactId>resteasy-jaxb-provider</artifactId>
     <packaging>jar</packaging>
     <name>Resteasy JAXB Provider</name>
-    <description/>
+    <description>
+        RESTEasy JAXB Provider modified for Android by Raphael Ning
+    </description>
 
     <dependencies>
         <dependency>
@@ -38,7 +40,7 @@
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>tjws</artifactId>
-            <version>${project.version}</version>
+            <version>3.0.5.Final</version>
             <scope>test</scope>
         </dependency>
         <!--

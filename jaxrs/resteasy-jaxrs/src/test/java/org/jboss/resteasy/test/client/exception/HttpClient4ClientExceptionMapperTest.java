@@ -1,26 +1,26 @@
 package org.jboss.resteasy.test.client.exception;
 
-import org.apache.http.ConnectionClosedException;
-import org.apache.http.HttpException;
-import org.apache.http.MalformedChunkCodingException;
-import org.apache.http.MethodNotSupportedException;
-import org.apache.http.NoHttpResponseException;
-import org.apache.http.ProtocolException;
-import org.apache.http.UnsupportedHttpVersionException;
-import org.apache.http.auth.AuthenticationException;
-import org.apache.http.auth.InvalidCredentialsException;
-import org.apache.http.auth.MalformedChallengeException;
-import org.apache.http.client.CircularRedirectException;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.NonRepeatableRequestException;
-import org.apache.http.client.RedirectException;
-import org.apache.http.conn.ConnectTimeoutException;
-import org.apache.http.conn.ConnectionPoolTimeoutException;
-import org.apache.http.conn.HttpHostConnectException;
-import org.apache.http.cookie.CookieRestrictionViolationException;
-import org.apache.http.cookie.MalformedCookieException;
-import org.apache.http.impl.auth.NTLMEngineException;
-import org.apache.http.impl.client.TunnelRefusedException;
+import ch.boye.httpclientandroidlib.ConnectionClosedException;
+import ch.boye.httpclientandroidlib.HttpException;
+import ch.boye.httpclientandroidlib.MalformedChunkCodingException;
+import ch.boye.httpclientandroidlib.MethodNotSupportedException;
+import ch.boye.httpclientandroidlib.NoHttpResponseException;
+import ch.boye.httpclientandroidlib.ProtocolException;
+import ch.boye.httpclientandroidlib.UnsupportedHttpVersionException;
+import ch.boye.httpclientandroidlib.auth.AuthenticationException;
+import ch.boye.httpclientandroidlib.auth.InvalidCredentialsException;
+import ch.boye.httpclientandroidlib.auth.MalformedChallengeException;
+import ch.boye.httpclientandroidlib.client.CircularRedirectException;
+import ch.boye.httpclientandroidlib.client.ClientProtocolException;
+import ch.boye.httpclientandroidlib.client.NonRepeatableRequestException;
+import ch.boye.httpclientandroidlib.client.RedirectException;
+import ch.boye.httpclientandroidlib.conn.ConnectTimeoutException;
+import ch.boye.httpclientandroidlib.conn.ConnectionPoolTimeoutException;
+import ch.boye.httpclientandroidlib.conn.HttpHostConnectException;
+import ch.boye.httpclientandroidlib.cookie.CookieRestrictionViolationException;
+import ch.boye.httpclientandroidlib.cookie.MalformedCookieException;
+import ch.boye.httpclientandroidlib.impl.auth.NTLMEngineException;
+import ch.boye.httpclientandroidlib.impl.client.TunnelRefusedException;
 import org.jboss.resteasy.client.ClientExecutor;
 import org.jboss.resteasy.client.ClientRequest;
 import org.jboss.resteasy.client.ClientResponse;
@@ -79,6 +79,9 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 /**
+ *
+ * Modified for Android by Raphael Ning.
+ *
  * @author <a href="ron.sigal@jboss.com">Ron Sigal</a>
  * @version $Revision: 1.1 $
  *
